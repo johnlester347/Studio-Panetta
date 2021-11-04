@@ -1,0 +1,113 @@
+.section-home {
+    padding-top: 100px;
+    background-color: #F4F2F0;
+    padding-bottom: 55px;
+}
+
+.card-1 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image1);
+    }
+    &__overlay {
+        @include overlay($image1);
+    }
+    @include card-style($color-text-white);
+}
+
+.card-2 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image2);
+    }
+    &__overlay {
+        @include overlay($image2);
+    }
+    @include card-style($color-text-white);
+}
+
+.card-3 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image3);
+    }
+    &__overlay {
+        @include overlay($image3);
+    }
+    @include card-style($color-text-white);
+}
+
+.card-4 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image4);
+    }
+    &__overlay {
+        @include overlay($image4);
+    }
+    @include card-style($color-text-white);
+}
+
+.card-5 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image-white);
+    }
+    &__overlay {
+        @include overlay($image-white);
+    }
+    @include card-style($color-text-black);
+}
+
+.card-6 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image-white);
+    }
+    &__overlay {
+        @include overlay($image-white);
+    }
+    @include card-style($color-text-black);
+}
+
+.card-7 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image-white);
+    }
+    &__overlay {
+        @include overlay($image-white);
+    }
+    @include card-style($color-text-black);
+}
+
+.card-8 {
+    @include card;
+    &:hover &__overlay {
+        @include text-hover($image-white);
+    }
+    &__overlay {
+        @include overlay($image-white);
+    }
+    @include card-style($color-text-black);
+}
+
+.projects {
+    padding: 25px;
+    @media screen and (max-width: 768px) {
+        padding: 10px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 520px);
+        grid-gap: 20px;
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
+        @media screen and (min-width: 1550px) {
+            grid-template-rows: repeat(4, minmax(520px, 952px));
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,OAAO,EAAE,OAAO;CACnB",
+    "sources": [
+        "../scss/core/utils/ie_notif.scss"
+    ],
+    "names": [],
+    "file": "ie_notif.css"
+}

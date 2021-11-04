@@ -1,0 +1,20 @@
+.contact-footer {
+    background-color: #9daf8a;
+}
+
+.contact {
+    &__footer-p {
+        color: black !important;
+    }
+    &__footer-link {
+        color: white;
+    }
+    &__footer-active {
+        color: white;
+        text-decoration: underline !important;
+        &:hover {
+            color: white;
+            text-decoration: underline !important;
+        }
+    }
+}

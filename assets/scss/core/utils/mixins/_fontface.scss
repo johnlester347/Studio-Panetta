@@ -1,0 +1,43 @@
+// Description: Import local and customized webfonts
+// ## Usage:
+// @include fontface('FONT FACE NAME', '../directory/fontfilename')
+// ## Output Sample:
+// @font-face {
+//    font-family: 'Helvetica';
+//    src: url('fonts/Helvetica/HelveticaNeueCE-Thin.eot');
+//    src: url('fonts/Helvetica/HelveticaNeueCE-Thin.woff') format('woff'),
+//    url('fonts/Helvetica/HelveticaNeueCE-Thin.ttf') format('truetype'),
+//    url('fonts/Helvetica/HelveticaNeueCE-Thin.svg#Riffic') format('svg'),
+//    url('fonts/Helvetica/HelveticaNeueCE-Thin.eot?#iefix') format('embedded-opentype');
+//    font-weight: normal;
+//    font-style: normal;
+//}
+@mixin fontface($fontname, $fonturl, $fontweight:null, $fontstyle:null) {
+    @font-face {
+        font-family: $fontname;
+        src: url($fonturl+'.eot');
+        src: url($fonturl+'.woff') format('woff'), url($fonturl+'.ttf') format('truetype'), url($fonturl+'.otf') format('opentype'), url($fonturl+'.svg') format('svg'), url($fonturl+'.eot?#iefix') format('embedded-opentype');
+        @if($fontweight) {
+            font-weight: $fontweight;
+        }
+        @else {
+            font-weight: normal;
+        }
+        @if($fontstyle) {
+            font-style: $fontstyle;
+        }
+        @else {
+            font-style: normal;
+        }
+    }
+}
+
+@font-face {
+    font-family: "sp_regular";
+    src: url("../fonts/sp-sans-web-regular.woff2") format("woff2"), url("../fonts/sp-sans-web-regular.woff") format("woff"), url("../fonts/sp-sans-web-regular.eot") format("eot");
+}
+
+@font-face {
+    font-family: "sp_medium";
+    src: url("../fonts/sp-sans-web-medium.woff2") format("woff2"), url("../fonts/sp-sans-web-medium.woff") format("woff"), url("../fonts/sp-sans-web-medium.eot") format("eot");
+}

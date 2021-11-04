@@ -1,0 +1,110 @@
+.section-contact {
+    background-color: #9daf8a;
+    min-height: 100vh;
+    max-height: 200vh;
+    padding-top: 71px;
+    // @media screen and (max-width: 1440px) {
+    //     min-height: 90vh;
+    // }
+    // @media screen and (max-width: 768px) {
+    //     min-height: 80vh;
+    // }
+}
+
+.contact {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 20px;
+        // grid-column-gap: 20px;
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__image {
+        padding: 0 20px;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__visit__follow {
+        display: flex;
+    }
+    &__details {
+        border-top: 1px solid black;
+        margin-right: 20px;
+        margin-left: 8px;
+    }
+    &__info {
+        padding-bottom: 60px;
+        &-heading {
+            font-size: em(24);
+            font-weight: 300;
+            color: black;
+            margin-top: 17px;
+        }
+        &-p1 {
+            font-size: em(18);
+            max-width: 60%;
+            margin-top: 17px;
+            margin-bottom: 22px;
+        }
+        &-p2 {
+            font-size: em(18);
+            margin: 0;
+        }
+        &-p3 {
+            font-size: em(18);
+        }
+    }
+    &__container-p {
+        line-height: 0;
+    }
+    &__visit {
+        border-top: 1px solid black;
+        margin-right: 32px;
+        width: 50%;
+    }
+    &__follow {
+        border-top: 1px solid black;
+        width: 50%;
+    }
+    &__visit-heading {
+        letter-spacing: 1px;
+        margin: 24px 0;
+        font-size: em(24);
+        color: #000000;
+    }
+    &__visit-p1 {
+        margin: 0;
+        font-size: em(18);
+    }
+    &__visit-p2 {
+        margin: 0;
+        font-size: em(18);
+    }
+    &__follow-social {
+        font-size: em(16);
+        letter-spacing: 1px;
+        text-decoration: underline;
+        color: #000000;
+        &:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+            color: #000000;
+        }
+    }
+    &__visit-map {
+        text-decoration: underline;
+        color: #000000;
+        &:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+            color: #000000;
+        }
+    }
+}
